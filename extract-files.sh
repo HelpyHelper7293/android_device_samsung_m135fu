@@ -12,7 +12,7 @@ if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
     return
 fi
 
-set -e
+#set -e
 
 export DEVICE=m135fu
 export DEVICE_COMMON=m135fu-common

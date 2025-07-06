@@ -32,3 +32,17 @@ TARGET_KERNEL_CONFIG := exynos850-m135fusnsxx_defconfig
 
 ## Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+BOARD_WLAN_DEVICE            := slsi
+BOARD_WPA_SUPPLICANT_DRIVER  := NL80211
+BOARD_HOSTAPD_DRIVER         := NL80211
+WIFI_DRIVER_FW_PATH_PARAM    := "/sys/module/wlan/parameters/fwpath"
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+PRODUCT_USES_PREBUILT_MAINLINE_MODULES := false
+PRODUCT_PACKAGES_REMOVE += \
+    android.net.ipsec.ike \
+    com.android.ipsec \
+    android.net.ipsec.ike.stubs \
+    android.net.ipsec.ike.stubs.module_lib \
+    android.net.ipsec.ike.stubs.module_lib.from-text
+
